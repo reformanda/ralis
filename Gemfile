@@ -1,12 +1,17 @@
 source 'https://rubygems.org'
 
+gem 'mime-types', '2.6.2'
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :jruby]
+gem 'dotenv-rails', '2.0.2'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.3'
+gem 'rails', '4.2.5'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'font-awesome-rails', '4.3.0.0'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+#gem 'sqlite3'
+gem 'activerecord-jdbcsqlite3-adapter'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0.4'
