@@ -1,0 +1,64 @@
+I, [2016-01-15T23:21:14.001661 #60813]  INFO -- : Started GET "/forms/basic_formsr" for 127.0.0.1 at 2016-01-15 23:21:14 -0500
+F, [2016-01-15T23:21:14.018053 #60813] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/forms/basic_formsr"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/JDMBP/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/JDMBP/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/JDMBP/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2016-01-15T23:21:19.744788 #60813]  INFO -- : Started GET "/forms/basic_forms" for 127.0.0.1 at 2016-01-15 23:21:19 -0500
+I, [2016-01-15T23:21:19.747909 #60813]  INFO -- : Processing by FormsController#basic_forms as HTML
+I, [2016-01-15T23:21:19.759094 #60813]  INFO -- :   Rendered forms/basic_forms.html.erb within layouts/application (2.3ms)
+I, [2016-01-15T23:23:30.467463 #60813]  INFO -- :   Rendered layouts/_skinconfig.html.erb (0.9ms)
+I, [2016-01-15T23:23:30.481207 #60813]  INFO -- :   Rendered layouts/_navigation.html.erb (12.9ms)
+I, [2016-01-15T23:23:30.483949 #60813]  INFO -- :   Rendered layouts/_topnavbar.html.erb (1.6ms)
+I, [2016-01-15T23:23:30.484870 #60813]  INFO -- :   Rendered layouts/_footer.html.erb (0.2ms)
+I, [2016-01-15T23:23:30.489533 #60813]  INFO -- :   Rendered layouts/_rightsidebar.html.erb (4.0ms)
+I, [2016-01-15T23:23:30.490695 #60813]  INFO -- : Completed 200 OK in 130743ms (Views: 130744.3ms | ActiveRecord: 0.0ms)
+I, [2016-01-15T23:23:30.932646 #60813]  INFO -- : Started GET "/assets/forms-fbc2d722b2d3bbf95fb255e69d9d73c5ec58518a24071085200ca48030885a18.css" for 127.0.0.1 at 2016-01-15 23:23:30 -0500
+I, [2016-01-15T23:23:30.935615 #60813]  INFO -- : Started GET "/assets/application-389c72e42fd4e6755aa72dfc3c38ca44492022579c2f4b8f080d0d78c1bd03ca.css" for 127.0.0.1 at 2016-01-15 23:23:30 -0500
+I, [2016-01-15T23:23:30.938423 #60813]  INFO -- : Started GET "/assets/application-d5382992309064fda725f11918e9c08270cac32c88ca8b1c87f28a04f2d81641.js" for 127.0.0.1 at 2016-01-15 23:23:30 -0500
+I, [2016-01-15T23:23:30.940795 #60813]  INFO -- : Started GET "/assets/forms-4121ee81456d4fd38d0a190ecf4d905a248c87d14a4580f9c2302e10995f8ec3.js" for 127.0.0.1 at 2016-01-15 23:23:30 -0500
+I, [2016-01-15T23:23:33.404084 #60813]  INFO -- : Started GET "/assets/green@2x.png" for 127.0.0.1 at 2016-01-15 23:23:33 -0500
+I, [2016-01-15T23:31:19.654406 #60813]  INFO -- : Started GET "/forms/advanced" for 127.0.0.1 at 2016-01-15 23:31:19 -0500
+I, [2016-01-15T23:31:19.655181 #60813]  INFO -- : Processing by FormsController#advanced as HTML
+I, [2016-01-15T23:31:19.659802 #60813]  INFO -- :   Rendered forms/advanced.html.erb within layouts/application (3.2ms)
+I, [2016-01-15T23:31:19.661999 #60813]  INFO -- :   Rendered layouts/_skinconfig.html.erb (0.0ms)
+I, [2016-01-15T23:31:19.666310 #60813]  INFO -- :   Rendered layouts/_navigation.html.erb (4.2ms)
+I, [2016-01-15T23:31:19.667519 #60813]  INFO -- :   Rendered layouts/_topnavbar.html.erb (1.0ms)
+I, [2016-01-15T23:31:19.667713 #60813]  INFO -- :   Rendered layouts/_footer.html.erb (0.0ms)
+I, [2016-01-15T23:31:19.669939 #60813]  INFO -- :   Rendered layouts/_rightsidebar.html.erb (2.1ms)
+I, [2016-01-15T23:31:19.672118 #60813]  INFO -- : Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.0ms)
+I, [2016-01-15T23:31:19.808986 #60813]  INFO -- : Started GET "/assets/p3-a274d168792b8a601b276e2cd34cf837d38a37796e3aead4699598ebd9ea03f8.jpg" for 127.0.0.1 at 2016-01-15 23:31:19 -0500
+I, [2016-01-15T23:31:20.423459 #60813]  INFO -- : Started GET "/assets/chosen-sprite@2x.png" for 127.0.0.1 at 2016-01-15 23:31:20 -0500
+I, [2016-01-15T23:31:20.486216 #60813]  INFO -- : Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for 127.0.0.1 at 2016-01-15 23:31:20 -0500
+I, [2016-01-15T23:31:20.493427 #60813]  INFO -- : Started GET "/assets/images/sprite-skin-flat.png" for 127.0.0.1 at 2016-01-15 23:31:20 -0500
+I, [2016-01-15T23:31:25.876018 #60813]  INFO -- : Started GET "/forms/basic_forms" for 127.0.0.1 at 2016-01-15 23:31:25 -0500
+I, [2016-01-15T23:31:25.876541 #60813]  INFO -- : Processing by FormsController#basic_forms as HTML
+I, [2016-01-15T23:31:25.877236 #60813]  INFO -- :   Rendered forms/basic_forms.html.erb within layouts/application (0.2ms)
+I, [2016-01-15T23:31:25.879418 #60813]  INFO -- :   Rendered layouts/_skinconfig.html.erb (0.1ms)
+I, [2016-01-15T23:31:25.883350 #60813]  INFO -- :   Rendered layouts/_navigation.html.erb (3.8ms)
+I, [2016-01-15T23:31:25.884688 #60813]  INFO -- :   Rendered layouts/_topnavbar.html.erb (1.2ms)
+I, [2016-01-15T23:31:25.884845 #60813]  INFO -- :   Rendered layouts/_footer.html.erb (0.0ms)
+I, [2016-01-15T23:31:25.887405 #60813]  INFO -- :   Rendered layouts/_rightsidebar.html.erb (2.4ms)
+I, [2016-01-15T23:31:25.889569 #60813]  INFO -- : Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+I, [2016-01-15T23:31:26.722944 #60813]  INFO -- : Started GET "/assets/green@2x.png" for 127.0.0.1 at 2016-01-15 23:31:26 -0500
+I, [2016-01-16T19:12:12.620493 #60813]  INFO -- : Started GET "/assets/green.png" for 127.0.0.1 at 2016-01-16 19:12:12 -0500
