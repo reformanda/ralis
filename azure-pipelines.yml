@@ -14,5 +14,5 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
     git remote add vsts https://JWilson0130@dev.azure.com/JWilson0130/Rails%20demo/_git/Rails%20demo
-    git push
+    export
   displayName: 'Run a multi-line script'
