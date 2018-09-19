@@ -15,7 +15,9 @@ steps:
 
 - script: |
     tfile=$(mktemp XXXXXXXXX)
-    branch=${$BUILD_SOURCEBRANCH/refs\/heads\//}
+    replstr="refs/heads/"
+    subststr=""
+    branch=${$BUILD_SOURCEBRANCH/$replstr/$subststr/}
     echo $branch
     git remote add $tfile https://cxcirkre2vscnimvu5tkw7yvsckonpdtojjjagl7ifc7l5bcdhta:JWilson0130@dev.azure.com/JWilson0130/Rails%20demo/_git/Rails%20demo
     git remote -v
