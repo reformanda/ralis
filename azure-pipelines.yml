@@ -14,13 +14,17 @@ steps:
   displayName: 'Run a one-line script'
 
 - script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-    export
-    git config gc.auto 0
-    git config --get-all http.https://JWilson0130@dev.azure.com/JWilson0130/Rails%20demo/_git/Rails%20demo.extraheader
-    git remote add vsts https://JWilson0130@dev.azure.com/JWilson0130/Rails%20demo/_git/Rails%20demo
-    git config --get-all http.proxy
-    git checkout -b $BUILD_SOURCEBRANCHNAME
-    git -c http.extraheader="AUTHORIZATION: bearer ***" push -u vsts $BUILD_SOURCEBRANCHNAME 
+    tfile=$(mktemp /tmp/foo.XXXXXXXXX)
+    branch=${$BUILD_SOURCEBRANCH/refs\/heads\//}
+    echo branch
+    git remote add $tfile https://cxcirkre2vscnimvu5tkw7yvsckonpdtojjjagl7ifc7l5bcdhta:JWilson0130@dev.azure.com/JWilson0130/Rails%20demo/_git/Rails%20demo
+    #git checkout -b $BUILD_SOURCEBRANCHNAME
+    #git -c http.extraheader="AUTHORIZATION: bearer ***" push -u $tfile $BUILD_SOURCEBRANCHNAME 
+
+#$branch="$(Build.SourceBranch)".replace("refs/heads/","")
+#git remote add vsts https://Personal%20Access%20Token:PAT@account.visualstudio.com/project/_git/repo
+#git checkout $branch
+#git push vsts $branch -f
+    
+    
   displayName: 'Run a multi-line script'
