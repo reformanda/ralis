@@ -21,8 +21,8 @@ steps:
     echo $branch
     git remote add $tfile https://cxcirkre2vscnimvu5tkw7yvsckonpdtojjjagl7ifc7l5bcdhta:JWilson0130@dev.azure.com/JWilson0130/Rails%20demo/_git/Rails%20demo
     git remote -v
-    #git checkout -b $BUILD_SOURCEBRANCHNAME
-    #git -c http.extraheader="AUTHORIZATION: bearer ***" push -u $tfile $BUILD_SOURCEBRANCHNAME 
+    git checkout -b $BUILD_SOURCEBRANCHNAME
+    git push -u $tfile $BUILD_SOURCEBRANCHNAME 
 
 #$branch="$(Build.SourceBranch)".replace("refs/heads/","")
 #git remote add vsts https://Personal%20Access%20Token:PAT@account.visualstudio.com/project/_git/repo
