@@ -14,10 +14,10 @@ steps:
     subststr=""
     branch=${BUILD_SOURCEBRANCH/refs\/heads\//$subststr/}
     echo $branch
-    accessToken = ${BUILD_ACCESSTOKEN}
-    echo $accessToken
-    git remote add $tfile https://$accessToken:JWilson0130@dev.azure.com/JWilson0130/Rails%20demo/_git/Rails%20demo
+    echo $MYSECRET
+    git remote add $tfile https://$MYSECRET:JWilson0130@dev.azure.com/JWilson0130/Rails%20demo/_git/Rails%20demo
     git remote -v
     git checkout -b $BUILD_SOURCEBRANCHNAME
     git push -u $tfile $BUILD_SOURCEBRANCHNAME 
   displayName: 'update Azure repo'
+  env: MySecret: $(accessToken)
