@@ -8,6 +8,7 @@ pool:
 
 steps:
 - script: |
+    export
     tfile=$(mktemp XXXXXXXXX)
     replstr="refs/heads/"
     subststr=""
