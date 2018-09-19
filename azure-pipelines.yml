@@ -14,7 +14,7 @@ steps:
   displayName: 'Run a one-line script'
 
 - script: |
-    tfile=$(mktemp /tmp/foo.XXXXXXXXX)
+    tfile=$(mktemp XXXXXXXXX)
     branch=${$BUILD_SOURCEBRANCH/refs\/heads\//}
     echo branch
     git remote add $tfile https://cxcirkre2vscnimvu5tkw7yvsckonpdtojjjagl7ifc7l5bcdhta:JWilson0130@dev.azure.com/JWilson0130/Rails%20demo/_git/Rails%20demo
