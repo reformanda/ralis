@@ -8,17 +8,20 @@ pool:
 
 steps:
 - script: |
+    # get the personal access token and save to variable
     echo "##vso[task.setvariable variable=accessToken;issecret=true]this is the access token value"
-    export
+    
+    # create a temp file to get a unique name
     tfile=$(mktemp XXXXXXXXX)
-    replstr="refs/heads/"
-    subststr=""
-    branch=${BUILD_SOURCEBRANCH/refs\/heads\//$subststr/}
-    echo $branch
-    echo "##vso[task.setvariable variable=accessToken;issecret=true]this is the access token value"
+    
+    # add new remote using the unique name
     git remote add $tfile https://$(accessToken):JWilson0130@dev.azure.com/JWilson0130/Rails%20demo/_git/Rails%20demo
-    git remote -v
+    
+    # switch to current branch
     git checkout -b $BUILD_SOURCEBRANCHNAME
+    
+    # push branch
     git push -u $tfile $BUILD_SOURCEBRANCHNAME 
-  displayName: 'update Azure repo'
+    
+  displayName: 'update Azure repo with Github change'
   
