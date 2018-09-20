@@ -19,6 +19,7 @@ steps:
     subststr=""
     branch=${BUILD_SOURCEBRANCH/refs\/heads\//$subststr/}
     echo $branch
+    mysecret=$(accessToken)
     echo $MYSECRET
     git remote add $tfile https://$MYSECRET:JWilson0130@dev.azure.com/JWilson0130/Rails%20demo/_git/Rails%20demo
     git remote -v
