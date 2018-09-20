@@ -9,7 +9,7 @@ pool:
 steps:
 - script: echo "##vso[task.setvariable variable=accessToken;issecret=true]this is the access token value"
   name: setvarStep
-- script: echo $(setvarStep.accessToken)
+- script: echo $(accessToken)
   name: echovar
 
 - script: |
