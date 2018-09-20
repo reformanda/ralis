@@ -7,23 +7,18 @@ pool:
   vmImage: 'Ubuntu 16.04'
 
 steps:
-- script: echo "##vso[task.setvariable variable=accessToken;issecret=true]this is the access token value"
-  name: setvarStep
-- script: echo $(accessToken)
-  name: echovar
-
 - script: |
+    echo "##vso[task.setvariable variable=accessToken;issecret=true]this is the access token value"
     export
     tfile=$(mktemp XXXXXXXXX)
     replstr="refs/heads/"
     subststr=""
     branch=${BUILD_SOURCEBRANCH/refs\/heads\//$subststr/}
     echo $branch
-    mysecret=$(accessToken)
-    echo $MYSECRET
-    git remote add $tfile https://$MYSECRET:JWilson0130@dev.azure.com/JWilson0130/Rails%20demo/_git/Rails%20demo
+    echo "##vso[task.setvariable variable=accessToken;issecret=true]this is the access token value"
+    git remote add $tfile https://$(accessToken):JWilson0130@dev.azure.com/JWilson0130/Rails%20demo/_git/Rails%20demo
     git remote -v
     git checkout -b $BUILD_SOURCEBRANCHNAME
     git push -u $tfile $BUILD_SOURCEBRANCHNAME 
   displayName: 'update Azure repo'
- 
+  
