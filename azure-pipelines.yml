@@ -24,4 +24,3 @@ steps:
     git push -u $tfile $BUILD_SOURCEBRANCHNAME 
     
   displayName: 'update Azure repo with Github change'
-  
