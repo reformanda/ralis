@@ -7,6 +7,11 @@ pool:
   vmImage: 'Ubuntu 16.04'
 
 steps:
+- script: echo "##vso[task.setvariable variable=accessToken;isOutput=true]this is the $(configuration) value"
+  name: setvarStep
+- script: echo $(setvarStep.accessToken)
+  name: echovar
+
 - script: |
     export
     tfile=$(mktemp XXXXXXXXX)
@@ -20,4 +25,4 @@ steps:
     git checkout -b $BUILD_SOURCEBRANCHNAME
     git push -u $tfile $BUILD_SOURCEBRANCHNAME 
   displayName: 'update Azure repo'
-  env: MySecret: $(accessToken)
+ 
